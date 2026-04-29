@@ -76,12 +76,12 @@ const Experience = () => {
     };
 
     return (
-        <section id="experience" className="py-24 px-8 md:px-16 min-h-screen relative z-10 mx-8 border-t border-white/5 pt-32">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#6a6566] opacity-10 rounded-full blur-[120px] pointer-events-none"></div>
+        <section id="experience" className="py-24 px-6 md:px-16 min-h-screen relative z-10 mx-4 md:mx-8 border-t border-white/5 pt-32 smooth-gpu">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 md:w-96 h-72 md:h-96 bg-[#6a6566] opacity-10 rounded-full blur-[120px] pointer-events-none"></div>
             
             <div className="max-w-7xl mx-auto text-center mb-16">
-                <h2 className="text-[#6a6566] text-2xl tracking-[0.3em] uppercase mb-4">Work Experience</h2>
-                <h3 className="text-5xl md:text-7xl font-bold tracking-tighter text-white">Career Profile.</h3>
+                <h2 className="text-[#6a6566] text-xl md:text-2xl tracking-[0.3em] uppercase mb-4">Work Experience</h2>
+                <h3 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter text-white">Career Profile.</h3>
             </div>
 
             <motion.div 
@@ -99,25 +99,25 @@ const Experience = () => {
                 </div>
 
                 {experiences.map((exp, index) => (
-                    <motion.div key={index} variants={itemVariants} className="experience-card mb-16 relative pl-10 group opacity-0">
-                        <div className="absolute w-6 h-6 bg-[#0a0a0a] rounded-full border-4 border-[#6a6566] -left-[13px] top-2 group-hover:scale-125 transition-transform duration-300 shadow-[0_0_15px_rgba(106,101,102,0.8)] z-10"></div>
+                    <motion.div key={index} variants={itemVariants} className="experience-card mb-12 md:mb-16 relative pl-8 md:pl-10 group opacity-0">
+                        <div className="absolute w-5 h-5 md:w-6 md:h-6 bg-[#0a0a0a] rounded-full border-4 border-[#6a6566] -left-[11px] md:-left-[13px] top-2 group-hover:scale-125 transition-transform duration-300 shadow-[0_0_15px_rgba(106,101,102,0.8)] z-10"></div>
                         
-                        <div className="bg-[#1a1a1a]/60 backdrop-blur-md p-8 rounded-3xl border border-white/5 hover:border-[#6a6566]/50 transition-colors duration-500 shadow-xl group-hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                        <div className="bg-[#1a1a1a]/60 backdrop-blur-md p-6 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 hover:border-[#6a6566]/50 transition-colors duration-500 shadow-xl group-hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                             <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-6 border-b border-white/10 pb-4">
                                 <div>
-                                    <h4 className="text-3xl font-bold text-white mb-2">{exp.role}</h4>
-                                    <p className="text-xl text-[#b392ac] font-medium">{exp.company}</p>
+                                    <h4 className="text-2xl md:text-3xl font-bold text-white mb-2">{exp.role}</h4>
+                                    <p className="text-lg md:text-xl text-[#b392ac] font-medium">{exp.company}</p>
                                 </div>
-                                <div className="mt-4 md:mt-0 px-4 py-2 bg-[#0a0a0a]/80 backdrop-blur-sm rounded-full text-sm text-gray-400 border border-white/5 whitespace-nowrap">
+                                <div className="mt-4 md:mt-0 px-4 py-2 bg-[#0a0a0a]/80 backdrop-blur-sm rounded-full text-xs md:text-sm text-gray-400 border border-white/5 md:whitespace-nowrap inline-block w-fit">
                                     {exp.period}
                                 </div>
                             </div>
                             
-                            <ul className="space-y-4">
+                            <ul className="space-y-3 md:space-y-4">
                                 {exp.description.map((desc, i) => (
                                     <li key={i} className="flex items-start text-gray-400 font-light leading-relaxed">
-                                        <span className="text-[#6a6566] mr-3 mt-1.5 opacity-60">◆</span>
-                                        <span className="text-lg">{desc}</span>
+                                        <span className="text-[#6a6566] mr-2 md:mr-3 mt-1.5 opacity-60 flex-shrink-0">◆</span>
+                                        <span className="text-base md:text-lg">{desc}</span>
                                     </li>
                                 ))}
                             </ul>

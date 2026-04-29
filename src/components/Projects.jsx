@@ -34,7 +34,7 @@ const Projects = () => {
             type: "Monitor Screen Design",
             desc: "Clean, high-visibility notice board for public monitors, presenting official announcements with clear hierarchy.",
             tags: ["Single Layout", "Public Monitor", "Typography"],
-            links: [{ label: "View Prototype", url: "https://www.figma.com/proto/PHUu7yCVqMLMftKWdrx8aX/UI-UX-projects~~~~~~?node-id=12130-207305&t=RtCopY4vWgTxxfGF-0&scaling=min-zoom&content-scaling=fixed&page-id=939%3A7182&starting-point-node-id=3943%3A10748" }],
+            links: [{ label: "View Prototype", url: "https://www.figma.com/proto/PHUu7yCVqMLMftKWdrx8aX/UI-UX-projects~~~~~~?node-id=12130-207305&t=RtCopY4vWgTxxfGF-0&scaling=min-zoom&content-scaling=fixed&page-id=939%3A7182&starting-point-node-id=3943%3A10748" }, {label: "View Design In Figma", url: "https://www.figma.com/proto/PHUu7yCVqMLMftKWdrx8aX/UI-UX-projects~~~~~~?node-id=12130-207305&t=RtCopY4vWgTxxfGF-0&scaling=min-zoom&content-scaling=fixed&page-id=939%3A7182&starting-point-node-id=3943%3A10748"}],
         },
         {
             title: "Xpress Sewa",
@@ -73,18 +73,18 @@ const Projects = () => {
     };
 
     return (
-        <section id="projects" className="py-24 px-8 md:px-16 min-h-screen relative z-10 mx-8 border-t border-white/5 pt-32">
+        <section id="projects" className="py-24 px-6 md:px-16 min-h-screen relative z-10 mx-4 md:mx-8 border-t border-white/5 pt-32 smooth-gpu">
             <div className="max-w-7xl mx-auto mb-16 md:flex justify-between items-end">
                 <div>
-                    <h2 className="text-[#6a6566] text-2xl tracking-[0.3em] uppercase mb-4">Portfolio</h2>
-                    <h3 className="text-5xl md:text-7xl font-bold tracking-tighter text-white">Selected Works.</h3>
+                    <h2 className="text-[#6a6566] text-xl md:text-2xl tracking-[0.3em] uppercase mb-4">Portfolio</h2>
+                    <h3 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter text-white">Selected Works.</h3>
                 </div>
-                <p className="max-w-md text-gray-400 font-light text-lg mt-6 md:mt-0 pb-2">
+                <p className="max-w-md text-gray-400 font-light text-base md:text-lg mt-6 md:mt-0 pb-2">
                     A collection of scalable systems, complex dashboards, and responsive platforms designed with usability at the core.
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
                 {projects.map((project, index) => (
                     <motion.div
                         key={index}
@@ -94,24 +94,24 @@ const Projects = () => {
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
-                        className={`group relative bg-[#1a1a1a]/60 backdrop-blur-md rounded-[2.5rem] p-8 border border-white/5 hover:border-[#6a6566]/60 transition-colors duration-500 overflow-hidden flex flex-col justify-between ${project.featured ? 'md:col-span-2 lg:col-span-1' : ''}`}
+                        className={`group relative bg-[#1a1a1a]/60 backdrop-blur-md rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-8 border border-white/5 hover:border-[#6a6566]/60 transition-colors duration-500 overflow-hidden flex flex-col justify-between ${project.featured ? 'md:col-span-2 lg:col-span-1' : ''}`}
                     >
                         {/* Hover Gradient */}
                         <div className="absolute inset-0 bg-gradient-to-br from-[#6a6566]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
 
                         <div>
-                            <div className="mb-6 flex flex-wrap gap-2">
+                            <div className="mb-4 md:mb-6 flex flex-wrap gap-2">
                                 {project.tags.slice(0, 2).map((tag, i) => (
-                                    <span key={i} className="px-3 py-1 bg-white/5 rounded-full text-xs text-[#b392ac] font-medium tracking-wide uppercase border border-white/10">
+                                    <span key={i} className="px-3 py-1 bg-white/5 rounded-full text-[10px] md:text-xs text-[#b392ac] font-medium tracking-wide uppercase border border-white/10">
                                         {tag}
                                     </span>
                                 ))}
                             </div>
 
-                            <h4 className="text-3xl font-bold text-white mb-2 leading-tight">{project.title}</h4>
-                            <p className="text-[#6a6566] font-medium mb-6 uppercase tracking-widest text-sm">{project.type}</p>
+                            <h4 className="text-2xl md:text-3xl font-bold text-white mb-2 leading-tight">{project.title}</h4>
+                            <p className="text-[#6a6566] font-medium mb-4 md:mb-6 uppercase tracking-widest text-[10px] md:text-sm">{project.type}</p>
 
-                            <p className="text-gray-400 font-light leading-relaxed mb-8">
+                            <p className="text-gray-400 font-light leading-relaxed mb-6 md:mb-8 text-sm md:text-base">
                                 {project.desc}
                             </p>
                         </div>
@@ -125,7 +125,7 @@ const Projects = () => {
                                     rel="noopener noreferrer"
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
-                                    className={`w-full py-3 rounded-full text-sm font-semibold transition-all duration-300 text-center ${i === 0
+                                    className={`w-full py-2.5 md:py-3 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 text-center ${i === 0
                                             ? "bg-white text-black hover:bg-gray-200 shadow-lg shadow-white/5"
                                             : "bg-transparent border border-white/20 text-white hover:border-[#6a6566] hover:bg-white/5"
                                         }`}
@@ -143,28 +143,30 @@ const Projects = () => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="max-w-7xl mx-auto mt-12 bg-gradient-to-r from-[#1a1a1a] to-[#2a2a2a] rounded-[3rem] p-12 border border-[#6a6566]/30 flex flex-col md:flex-row items-center justify-between shadow-2xl relative overflow-hidden"
+                className="max-w-7xl mx-auto mt-12 bg-gradient-to-r from-[#1a1a1a] to-[#2a2a2a] rounded-[2rem] md:rounded-[3rem] p-8 md:p-12 border border-[#6a6566]/30 flex flex-col md:flex-row items-center justify-between shadow-2xl relative overflow-hidden"
             >
-                <div className="absolute -right-20 top-1/2 -translate-y-1/2 text-[15rem] leading-none opacity-[0.03] font-black select-none pointer-events-none">
+                <div className="absolute -right-20 top-1/2 -translate-y-1/2 text-[10rem] md:text-[15rem] leading-none opacity-[0.03] font-black select-none pointer-events-none">
                     LIVE
                 </div>
 
                 <div className="max-w-2xl relative z-10">
-                    <div className="inline-block px-4 py-1.5 bg-[#6a6566]/20 rounded-full text-[#b392ac] font-bold tracking-widest uppercase text-xs mb-6 border border-[#6a6566]/30">
+                    <div className="inline-block px-4 py-1.5 bg-[#6a6566]/20 rounded-full text-[#b392ac] font-bold tracking-widest uppercase text-[10px] md:text-xs mb-6 border border-[#6a6566]/30">
                         Speaker Experience
                     </div>
-                    <h3 className="text-4xl font-bold text-white mb-4">Tech Friday Webinar Host</h3>
-                    <p className="text-gray-400 text-lg font-light leading-relaxed mb-6">
+                    <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Tech Friday Webinar Host</h3>
+                    <p className="text-gray-400 text-base md:text-lg font-light leading-relaxed mb-6 md:mb-0">
                         Hosted a live webinar on professional UI/UX design concepts for Sriyog Consulting. Demonstrated Apple's Liquid Glass and Google's Material UI, complete with live Figma prototyping of a cosmetic product app.
                     </p>
                 </div>
                 <div className="mt-8 md:mt-0 relative z-10 flex-shrink-0">
-                    <motion.button
+                    <motion.a
                         whileHover={{ scale: 1.05 }}
-                        className="w-24 h-24 bg-[#6a6566] rounded-full flex items-center justify-center text-white text-3xl font-black border-4 border-[#0a0a0a] shadow-[0_0_30px_rgba(106,101,102,0.5)] cursor-pointer"
+                        href="https://drive.google.com/file/d/1YEYpU62sfvZaFTgEe2FvI4A1EIt_mGnr/view"
+                        target="_blank"
+                        className="w-20 h-20 md:w-24 md:h-24 bg-[#6a6566] rounded-full flex items-center justify-center text-white text-2xl md:text-3xl font-black border-4 border-[#0a0a0a] shadow-[0_0_30px_rgba(106,101,102,0.5)] cursor-pointer"
                     >
                         ↗
-                    </motion.button>
+                    </motion.a>
                 </div>
             </motion.div>
         </section>

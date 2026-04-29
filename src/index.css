@@ -12,4 +12,12 @@ html {
 
 .animate-twinkle {
   animation: twinkle 3s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.smooth-gpu {
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform: translateZ(0);
+  will-change: transform, opacity;
 }

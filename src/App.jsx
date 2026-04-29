@@ -5,14 +5,14 @@ import Experience from "./components/Experience"
 import Skills from "./components/Skills"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
-import StarsBackground from "./components/StarsBackground"
+import BackgroundCanvas from "./components/BackgroundCanvas"
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white p-4 flex flex-col relative">
-      <StarsBackground />
+    <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col relative overflow-x-hidden">
+      <BackgroundCanvas />
       <NavBar />
-      <main className="overflow-x-hidden">
+      <main className="w-full">
         <Home />
         <About />
         <Experience />
