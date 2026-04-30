@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { animate as anime, random } from 'animejs';
-import profileImg from '../assets/profile.png';
+import profileImg from '../assets/profile.jpg';
 import cvPDF from '../assets/Shreeya_CV.pdf';
 
 const Home = () => {
