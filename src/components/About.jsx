@@ -41,26 +41,26 @@ const About = () => {
         className="flex-1 space-y-6 md:space-y-8"
       >
         <div>
-            <h2 className="text-[#6a6566] text-xl md:text-2xl tracking-[0.3em] uppercase mb-4">About Me</h2>
-            <h3 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter">My Journey.</h3>
+            <h2 className="text-[#6a6566] text-lg md:text-xl tracking-[0.3em] uppercase mb-4">About Me</h2>
+            <h3 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tighter">My Journey.</h3>
         </div>
         
-        <p className="text-gray-400 text-lg md:text-xl leading-relaxed font-light max-w-2xl">
+        <p className="text-gray-400 text-base md:text-lg leading-relaxed font-light max-w-2xl">
           I am a specialized UI/UX Designer with deep experience designing scalable SaaS platforms, complex dashboards, and responsive applications. My goal is to simplify workflows across multiple roles without compromising aesthetics.
         </p>
         
-        <p className="text-gray-400 text-lg md:text-xl leading-relaxed font-light max-w-2xl">
+        <p className="text-gray-400 text-base md:text-lg leading-relaxed font-light max-w-2xl">
           Beyond wireframing and prototyping in Figma, I possess strong capabilities in user research, empathy mapping, and transforming complex business requirements into intuitive solutions. 
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 md:gap-6 mt-8">
             <div className="bg-[#1a1a1a]/80 backdrop-blur-md p-6 rounded-2xl border border-white/5 w-full sm:w-48 text-center hover:-translate-y-2 transition-transform duration-300">
-                <h4 className="text-[#6a6566] text-3xl md:text-4xl font-bold mb-2">20+</h4>
-                <p className="text-xs md:text-sm tracking-widest text-gray-400 uppercase">Projects</p>
+                <h4 className="text-[#6a6566] text-2xl md:text-3xl font-bold mb-2">20+</h4>
+                <p className="text-[10px] md:text-xs tracking-widest text-gray-400 uppercase">Projects</p>
             </div>
             <div className="bg-[#1a1a1a]/80 backdrop-blur-md p-6 rounded-2xl border border-white/5 w-full sm:w-48 text-center hover:-translate-y-2 transition-transform duration-300">
-                <h4 className="text-[#6a6566] text-3xl md:text-4xl font-bold mb-2">3</h4>
-                <p className="text-xs md:text-sm tracking-widest text-gray-400 uppercase">Languages</p>
+                <h4 className="text-[#6a6566] text-2xl md:text-3xl font-bold mb-2">3</h4>
+                <p className="text-[10px] md:text-xs tracking-widest text-gray-400 uppercase">Languages</p>
             </div>
         </div>
       </motion.div>
@@ -76,7 +76,7 @@ const About = () => {
         <div className="bg-[#1a1a1a]/50 backdrop-blur-md p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] border border-white/5 shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#6a6566] opacity-10 rounded-full blur-[80px]"></div>
             
-            <h3 className="text-2xl md:text-3xl font-semibold mb-8 md:mb-10 tracking-tight">Education <span className="text-[#6a6566]">& Courses</span></h3>
+            <h3 className="text-xl md:text-2xl font-semibold mb-8 md:mb-10 tracking-tight">Education <span className="text-[#6a6566]">& Courses</span></h3>
             
             <div ref={timelineRef} className="space-y-8 relative">
                 {/* Vertical Line Container */}

@@ -47,13 +47,13 @@ const Skills = () => {
             className="bg-[#1a1a1a]/40 backdrop-blur-md p-6 md:p-10 rounded-[2rem] md:rounded-[3rem] border border-white/5 hover:border-[#6a6566]/30 transition-colors duration-500 shadow-2xl relative overflow-hidden"
         >
             <div className="absolute top-0 right-0 w-32 h-32 bg-[#6a6566] opacity-10 rounded-full blur-[50px]"></div>
-            <h4 className="text-2xl md:text-3xl font-semibold mb-6 md:mb-8 text-white tracking-tight">{title}</h4>
+            <h4 className="text-xl md:text-2xl font-semibold mb-6 md:mb-8 text-white tracking-tight">{title}</h4>
             <div className="flex flex-wrap gap-3 md:gap-4">
                 {skills.map((skill, idx) => (
                     <motion.div
                         key={idx}
                         whileHover={{ scale: 1.05, y: -2 }}
-                        className="skill-badge px-4 md:px-6 py-2 md:py-3 bg-[#0a0a0a]/80 border border-white/10 rounded-full text-gray-300 font-medium text-sm md:text-lg shadow-sm hover:border-[#6a6566] hover:text-white transition-colors cursor-default opacity-0"
+                        className="skill-badge px-4 md:px-6 py-2 md:py-3 bg-[#0a0a0a]/80 border border-white/10 rounded-full text-gray-300 font-medium text-[13px] md:text-[15px] shadow-sm hover:border-[#6a6566] hover:text-white transition-colors cursor-default opacity-0"
                     >
                         {skill}
                     </motion.div>
@@ -65,8 +65,8 @@ const Skills = () => {
     return (
         <section id="skills" className="py-24 px-6 md:px-16 min-h-screen relative z-10 mx-4 md:mx-8 border-t border-white/5 pt-32 smooth-gpu">
             <div className="max-w-7xl mx-auto mb-16 text-center">
-                <h2 className="text-[#6a6566] text-xl md:text-2xl tracking-[0.3em] uppercase mb-4">Competencies</h2>
-                <h3 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter text-white">Skills & Tools.</h3>
+                <h2 className="text-[#6a6566] text-lg md:text-xl tracking-[0.3em] uppercase mb-4">Competencies</h2>
+                <h3 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tighter text-white">Skills & Tools.</h3>
             </div>
 
             <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-7xl mx-auto">

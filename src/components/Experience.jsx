@@ -80,8 +80,8 @@ const Experience = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 md:w-96 h-72 md:h-96 bg-[#6a6566] opacity-10 rounded-full blur-[120px] pointer-events-none"></div>
             
             <div className="max-w-7xl mx-auto text-center mb-16">
-                <h2 className="text-[#6a6566] text-xl md:text-2xl tracking-[0.3em] uppercase mb-4">Work Experience</h2>
-                <h3 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter text-white">Career Profile.</h3>
+                <h2 className="text-[#6a6566] text-lg md:text-xl tracking-[0.3em] uppercase mb-4">Work Experience</h2>
+                <h3 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tighter text-white">Career Profile.</h3>
             </div>
 
             <motion.div 
@@ -105,8 +105,8 @@ const Experience = () => {
                         <div className="bg-[#1a1a1a]/60 backdrop-blur-md p-6 md:p-8 rounded-2xl md:rounded-3xl border border-white/5 hover:border-[#6a6566]/50 transition-colors duration-500 shadow-xl group-hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                             <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-6 border-b border-white/10 pb-4">
                                 <div>
-                                    <h4 className="text-2xl md:text-3xl font-bold text-white mb-2">{exp.role}</h4>
-                                    <p className="text-lg md:text-xl text-[#b392ac] font-medium">{exp.company}</p>
+                                    <h4 className="text-xl md:text-2xl font-bold text-white mb-2">{exp.role}</h4>
+                                    <p className="text-base md:text-lg text-[#b392ac] font-medium">{exp.company}</p>
                                 </div>
                                 <div className="mt-4 md:mt-0 px-4 py-2 bg-[#0a0a0a]/80 backdrop-blur-sm rounded-full text-xs md:text-sm text-gray-400 border border-white/5 md:whitespace-nowrap inline-block w-fit">
                                     {exp.period}
@@ -117,7 +117,7 @@ const Experience = () => {
                                 {exp.description.map((desc, i) => (
                                     <li key={i} className="flex items-start text-gray-400 font-light leading-relaxed">
                                         <span className="text-[#6a6566] mr-2 md:mr-3 mt-1.5 opacity-60 flex-shrink-0">◆</span>
-                                        <span className="text-base md:text-lg">{desc}</span>
+                                        <span className="text-sm md:text-[15px]">{desc}</span>
                                     </li>
                                 ))}
                             </ul>

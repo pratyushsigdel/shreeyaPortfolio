@@ -76,10 +76,10 @@ const Projects = () => {
         <section id="projects" className="py-24 px-6 md:px-16 min-h-screen relative z-10 mx-4 md:mx-8 border-t border-white/5 pt-32 smooth-gpu">
             <div className="max-w-7xl mx-auto mb-16 md:flex justify-between items-end">
                 <div>
-                    <h2 className="text-[#6a6566] text-xl md:text-2xl tracking-[0.3em] uppercase mb-4">Portfolio</h2>
-                    <h3 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter text-white">Selected Works.</h3>
+                    <h2 className="text-[#6a6566] text-lg md:text-xl tracking-[0.3em] uppercase mb-4">Portfolio</h2>
+                    <h3 className="text-3xl sm:text-4xl md:text-6xl font-bold tracking-tighter text-white">Selected Works.</h3>
                 </div>
-                <p className="max-w-md text-gray-400 font-light text-base md:text-lg mt-6 md:mt-0 pb-2">
+                <p className="max-w-md text-gray-400 font-light text-sm md:text-base mt-6 md:mt-0 pb-2">
                     A collection of scalable systems, complex dashboards, and responsive platforms designed with usability at the core.
                 </p>
             </div>
@@ -108,10 +108,10 @@ const Projects = () => {
                                 ))}
                             </div>
 
-                            <h4 className="text-2xl md:text-3xl font-bold text-white mb-2 leading-tight">{project.title}</h4>
+                            <h4 className="text-xl md:text-2xl font-bold text-white mb-2 leading-tight">{project.title}</h4>
                             <p className="text-[#6a6566] font-medium mb-4 md:mb-6 uppercase tracking-widest text-[10px] md:text-sm">{project.type}</p>
 
-                            <p className="text-gray-400 font-light leading-relaxed mb-6 md:mb-8 text-sm md:text-base">
+                            <p className="text-gray-400 font-light leading-relaxed mb-6 md:mb-8 text-[13px] md:text-[15px]">
                                 {project.desc}
                             </p>
                         </div>
@@ -153,8 +153,8 @@ const Projects = () => {
                     <div className="inline-block px-4 py-1.5 bg-[#6a6566]/20 rounded-full text-[#b392ac] font-bold tracking-widest uppercase text-[10px] md:text-xs mb-6 border border-[#6a6566]/30">
                         Speaker Experience
                     </div>
-                    <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">Tech Friday Webinar Host</h3>
-                    <p className="text-gray-400 text-base md:text-lg font-light leading-relaxed mb-6 md:mb-0">
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">Tech Friday Webinar Host</h3>
+                    <p className="text-gray-400 text-sm md:text-base font-light leading-relaxed mb-6 md:mb-0">
                         Hosted a live webinar on professional UI/UX design concepts for Sriyog Consulting. Demonstrated Apple's Liquid Glass and Google's Material UI, complete with live Figma prototyping of a cosmetic product app.
                     </p>
                 </div>
