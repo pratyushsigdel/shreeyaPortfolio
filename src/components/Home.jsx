@@ -47,7 +47,7 @@ const Home = () => {
                         className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter leading-[0.9] drop-shadow-sm"
                     >
                         I'm Shreeya, <br />
-                        <span className="text-[#6a6566] italic"> UI UX Designer</span>
+                        <span className="text-yellow-200"> UI UX Designer</span>
                     </motion.h1>
                 </div>
 
