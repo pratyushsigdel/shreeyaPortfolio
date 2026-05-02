@@ -10,21 +10,14 @@ const BackgroundCanvas = () => {
         const ctx = canvas.getContext('2d');
         let animationFrameId;
 
-        // Configuration
         let width, height;
-
-        const stars = [];
-        const particles = [];
+        const fireflies = [];
 
         const init = () => {
             const dpr = window.devicePixelRatio || 1;
             width = window.innerWidth;
             height = window.innerHeight;
             
-            // Scale number of elements based on screen size
-            const numStars = width < 768 ? 80 : 150;
-            const numParticles = width < 768 ? 30 : 60;
-
             canvas.width = width * dpr;
             canvas.height = height * dpr;
             ctx.scale(dpr, dpr);
@@ -32,64 +25,95 @@ const BackgroundCanvas = () => {
             canvas.style.width = `${width}px`;
             canvas.style.height = `${height}px`;
 
-            stars.length = 0;
-            for (let i = 0; i < numStars; i++) {
-                stars.push({
-                    x: Math.random() * width,
-                    y: Math.random() * height,
-                    size: Math.random() * 1.5 + 0.5,
-                    opacity: Math.random(),
-                    speed: 0.005 + Math.random() * 0.01,
-                    direction: Math.random() > 0.5 ? 1 : -1
-                });
-            }
+            const numFireflies = width < 768 ? 35 : 65;
+            fireflies.length = 0;
 
-            particles.length = 0;
-            for (let i = 0; i < numParticles; i++) {
-                particles.push({
+            for (let i = 0; i < numFireflies; i++) {
+                fireflies.push({
                     x: Math.random() * width,
                     y: Math.random() * height,
-                    baseX: Math.random() * width,
-                    baseY: Math.random() * height,
-                    size: Math.random() * 4 + 2,
-                    color: Math.random() > 0.5 ? 'rgba(106, 101, 102, 0.3)' : 'rgba(255, 255, 255, 0.2)',
-                    vx: (Math.random() - 0.5) * 0.5,
-                    vy: (Math.random() - 0.5) * 0.5,
-                    phase: Math.random() * Math.PI * 2,
-                    amplitude: Math.random() * 50 + 20
+                    size: Math.random() * 2.5 + 1,
+                    vx: (Math.random() - 0.5) * 0.3,
+                    vy: (Math.random() - 0.5) * 0.3,
+                    opacity: 0,
+                    targetOpacity: Math.random() * 0.6 + 0.2,
+                    fadeSpeed: 0.003 + Math.random() * 0.006,
+                    fading: Math.random() > 0.5,
+                    glowSize: Math.random() * 15 + 10,
+                    noiseOffset: Math.random() * 1000
                 });
             }
         };
 
-        const draw = (time) => {
-            ctx.clearRect(0, 0, width, height);
+        const drawFirefly = (f) => {
+            if (f.opacity <= 0) return;
 
-            // Draw Stars (Twinkling)
-            stars.forEach(star => {
-                star.opacity += star.speed * star.direction;
-                if (star.opacity > 1 || star.opacity < 0) {
-                    star.direction *= -1;
+            // Radial gradient for bloom effect
+            const gradient = ctx.createRadialGradient(f.x, f.y, 0, f.x, f.y, f.glowSize);
+            gradient.addColorStop(0, `rgba(255, 255, 200, ${f.opacity * 0.8})`);
+            gradient.addColorStop(0.3, `rgba(106, 101, 102, ${f.opacity * 0.3})`);
+            gradient.addColorStop(1, 'rgba(10, 10, 10, 0)');
+
+            ctx.beginPath();
+            ctx.arc(f.x, f.y, f.glowSize, 0, Math.PI * 2);
+            ctx.fillStyle = gradient;
+            ctx.fill();
+
+            // Core of the firefly
+            ctx.beginPath();
+            ctx.arc(f.x, f.y, f.size, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 255, 255, ${f.opacity})`;
+            ctx.fill();
+        };
+
+        const update = () => {
+            fireflies.forEach(f => {
+                // Organic movement
+                f.noiseOffset += 0.005;
+                f.vx += Math.sin(f.noiseOffset) * 0.01;
+                f.vy += Math.cos(f.noiseOffset * 0.8) * 0.01;
+
+                // Friction
+                f.vx *= 0.99;
+                f.vy *= 0.99;
+
+                f.x += f.vx;
+                f.y += f.vy;
+
+                // Screen wrap
+                if (f.x < -f.glowSize) f.x = width + f.glowSize;
+                if (f.x > width + f.glowSize) f.x = -f.glowSize;
+                if (f.y < -f.glowSize) f.y = height + f.glowSize;
+                if (f.y > height + f.glowSize) f.y = -f.glowSize;
+
+                // Pulsing Opacity
+                if (f.fading) {
+                    f.opacity -= f.fadeSpeed;
+                    if (f.opacity <= 0) {
+                        f.fading = false;
+                        if (Math.random() > 0.8) {
+                            f.x = Math.random() * width;
+                            f.y = Math.random() * height;
+                        }
+                    }
+                } else {
+                    f.opacity += f.fadeSpeed;
+                    if (f.opacity >= f.targetOpacity) {
+                        f.fading = true;
+                        f.targetOpacity = Math.random() * 0.6 + 0.2;
+                    }
                 }
-                
-                ctx.beginPath();
-                ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity * 0.8})`;
-                ctx.fill();
             });
+        };
 
-            // Draw Particles (Floating)
-            particles.forEach(p => {
-                p.phase += 0.005;
-                p.x = p.baseX + Math.sin(p.phase) * p.amplitude;
-                p.y = p.baseY + Math.cos(p.phase * 0.7) * p.amplitude;
+        const render = () => {
+            ctx.fillStyle = '#0a0a0a';
+            ctx.fillRect(0, 0, width, height);
 
-                ctx.beginPath();
-                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-                ctx.fillStyle = p.color;
-                ctx.fill();
-            });
+            update();
+            fireflies.forEach(drawFirefly);
 
-            animationFrameId = requestAnimationFrame(draw);
+            animationFrameId = requestAnimationFrame(render);
         };
 
         const handleResize = () => {
@@ -97,7 +121,7 @@ const BackgroundCanvas = () => {
         };
 
         init();
-        draw();
+        render();
 
         window.addEventListener('resize', handleResize);
 
@@ -107,19 +131,14 @@ const BackgroundCanvas = () => {
         };
     }, []);
 
-    useEffect(() => {
-        if (canvasRef.current) {
-            canvasRef.current.style.opacity = 1;
-        }
-    }, []);
-
     return (
         <canvas
             ref={canvasRef}
-            className="fixed inset-0 z-[-1] bg-[#0a0a0a] pointer-events-none transition-opacity duration-1000"
-            style={{ willChange: 'transform', opacity: 0 }}
+            className="fixed inset-0 z-0 pointer-events-none"
+            style={{ willChange: 'transform' }}
         />
     );
 };
 
 export default BackgroundCanvas;
+

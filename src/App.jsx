@@ -10,7 +10,7 @@ import Certifications from "./components/Certifications"
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white flex flex-col relative overflow-x-hidden">
+    <div className="min-h-screen text-white flex flex-col relative overflow-x-hidden z-10">
       <BackgroundCanvas />
       <NavBar />
       <main className="w-full">
