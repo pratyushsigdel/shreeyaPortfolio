@@ -7,6 +7,7 @@ const NavBar = () => {
     { title: "About", id: "about" },
     { title: "Experience", id: "experience" },
     { title: "Projects", id: "projects" },
+    { title: "Certifications", id: "certifications" },
     { title: "Skills", id: "skills" },
   ];
 
@@ -190,6 +191,16 @@ const NavBar = () => {
               variants={menuVariants}
               className="fixed top-0 left-0 w-full h-full bg-[#0a0a0a] flex flex-col items-center justify-center space-y-10 z-[110] md:hidden p-8"
             >
+              {/* Close Button Inside Menu */}
+              <button
+                onClick={() => setIsMenuOpen(false)}
+                className="absolute top-8 right-8 text-white p-2 focus:outline-none bg-[#1a1a1a] rounded-full border border-white/10 shadow-lg z-[120]"
+              >
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
               <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
                 <div className="absolute top-[-10%] right-[-10%] w-96 h-96 bg-[#6a6566] rounded-full blur-[120px]"></div>
                 <div className="absolute bottom-[-10%] left-[-10%] w-96 h-96 bg-[#333] rounded-full blur-[100px]"></div>
