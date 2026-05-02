@@ -47,16 +47,10 @@ const Home = () => {
                         className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter leading-[0.9] drop-shadow-sm"
                     >
                         I'm Shreeya, <br />
-                        <span className="text-[#6a6566] italic"> The Designer</span>
+                        <span className="text-[#6a6566] italic"> UI UX Designer</span>
                     </motion.h1>
                 </div>
 
-                <motion.p
-                    variants={itemVariants}
-                    className="text-[#6a6566] text-xl md:text-3xl font-medium tracking-tight"
-                >
-                    UI UX Designer
-                </motion.p>
 
                 <motion.p
                     variants={itemVariants}
@@ -90,7 +84,7 @@ const Home = () => {
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
             >
-                <div className="relative group w-full max-w-[320px] sm:max-w-[400px] md:max-w-[450px]">
+                <div className="relative group w-full max-w-[320px] sm:max-w-[400px] md:max-w-[500px]">
                     {/* Background Glows */}
                     <div className="absolute -inset-10 bg-[#6a6566] opacity-10 rounded-full blur-[80px] group-hover:opacity-25 transition-opacity duration-1000 animate-pulse"></div>
                     <div className="absolute -inset-20 bg-[#1a1a1a] opacity-5 rounded-full blur-[100px] -z-10 animate-pulse delay-700"></div>
