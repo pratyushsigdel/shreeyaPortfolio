@@ -55,7 +55,7 @@ const About = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 md:gap-6 mt-8">
             <div className="bg-[#1a1a1a]/80 backdrop-blur-md p-6 rounded-2xl border border-white/5 w-full sm:w-48 text-center hover:-translate-y-2 transition-transform duration-300">
-                <h4 className="text-[#6a6566] text-2xl md:text-3xl font-bold mb-2">20+</h4>
+                <h4 className="text-[#6a6566] text-2xl md:text-3xl font-bold mb-2">10+</h4>
                 <p className="text-[10px] md:text-xs tracking-widest text-gray-400 uppercase">Projects</p>
             </div>
             <div className="bg-[#1a1a1a]/80 backdrop-blur-md p-6 rounded-2xl border border-white/5 w-full sm:w-48 text-center hover:-translate-y-2 transition-transform duration-300">

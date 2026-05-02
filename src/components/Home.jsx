@@ -46,8 +46,8 @@ const Home = () => {
                         variants={itemVariants}
                         className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tighter leading-[0.9] drop-shadow-sm"
                     >
-                        I'm Shreeya <br />
-                        <span className="text-[#6a6566] italic">Designer</span>
+                        I'm Shreeya, <br />
+                        <span className="text-[#6a6566] italic"> The Designer</span>
                     </motion.h1>
                 </div>
 
@@ -55,7 +55,7 @@ const Home = () => {
                     variants={itemVariants}
                     className="text-[#6a6566] text-xl md:text-3xl font-medium tracking-tight"
                 >
-                    UI UX Designer & Animation Expert
+                    UI UX Designer
                 </motion.p>
 
                 <motion.p

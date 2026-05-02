@@ -5,17 +5,25 @@ import { animate as anime } from 'animejs';
 const Projects = () => {
     const projects = [
         {
-            title: "Attendance Management System",
+            title: "Attendance Management System (USER | Admin | Super Admin)",
             type: "SaaS Web & Mobile",
             desc: "Enterprise HRMS workforce management platform for attendance, leave, payroll, and employee operations.",
             tags: ["High-Fidelity UI", "User flows", "Prototyping", "Design Systems"],
             links: [{ label: "View Case Study", url: "https://www.behance.net/gallery/247918355/Attendance-Management-System-%28HRMS%29" }, { label: "View Design In Figma", url: "https://www.figma.com/design/PHUu7yCVqMLMftKWdrx8aX/UI-UX-projects~~~~~~?node-id=12100-62274&t=aC4ooyrPpDQSZUpt-0" }],
             featured: true
         },
+        {
+            title: "Attendance Management APP (USER | Admin | Super Admin) ",
+            type: "SaaS Mobile App",
+            desc: "Mobile-first role-based workforce application designed for attendance tracking leave management, payroll access, approvals, reporting, updates, and dailyoperations for all user levels.",
+            tags: ["High-Fidelity UI", "User flows", "Prototyping", "Design Systems"],
+            links: [{ label: "View Prototype", url: "https://www.figma.com/proto/PHUu7yCVqMLMftKWdrx8aX/UI-UX-projects~~~~~~?node-id=12107-53607&t=RtCopY4vWgTxxfGF-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=12107%3A53579&show-proto-sidebar=1" }, { label: "View Design In Figma", url: "https://www.figma.com/design/PHUu7yCVqMLMftKWdrx8aX/UI-UX-projects~~~~~~?node-id=12107-50290&t=RtCopY4vWgTxxfGF-1" }],
+            featured: true
+        },
 
 
         {
-            title: "Parking Management System",
+            title: "Parking Management System (Admin | Super Admin)",
             type: "Web Dashboard & App",
             desc: "Web-based and mobile apps designed for guard-level entry, QR billing, revenue monitoring, and admin control.",
             tags: ["Admin Dashboard", "Super Admin", "Mobile POS"],
@@ -23,18 +31,40 @@ const Projects = () => {
             featured: true
         },
         {
-            title: "Guthi Sansthan Portal",
-            type: "Web & Mobile Platforms",
+            title: "Parking Management System (POS App | Admin App)",
+            type: "Mobile Apps",
+            desc: "Mobile POS and admin applications for vehicle entry/exit, QR-based billing, revenue analytics, and operational controls, designed for clarity and speed in dynamic environments.",
+            tags: ["Admin Dashboard", "Super Admin", "Mobile POS"],
+            links: [{ label: "View Prototype", url: "https://www.figma.com/proto/PHUu7yCVqMLMftKWdrx8aX/UI-UX-projects~~~~~~?node-id=12163-146962&t=RtCopY4vWgTxxfGF-0&scaling=scale-down&content-scaling=fixed&page-id=930%3A7145&starting-point-node-id=2884%3A39911" }, { label: "View Design In Figma", url: "https://www.figma.com/design/PHUu7yCVqMLMftKWdrx8aX/UI-UX-projects~~~~~~?node-id=12163-146962&t=koMPMb4R3DsjZ7Kl-0" }],
+            featured: true
+        },
+        {
+            title: "Guthi Sansthan Website",
+            type: "Web Platform",
             desc: "Informational website and attendance system to showcase property details, heritage services, and public notices.",
             tags: ["Responsive Web", "Mobile App", "Accessible UI"],
             links: [{ label: "View Prototype", url: "https://www.figma.com/proto/PHUu7yCVqMLMftKWdrx8aX/UI-UX-projects~~~~~~?node-id=12130-139680&t=RtCopY4vWgTxxfGF-0&scaling=min-zoom&content-scaling=fixed&page-id=939%3A7182&starting-point-node-id=3943%3A10748" }, { label: "View Design In Figma", url: "https://www.figma.com/design/PHUu7yCVqMLMftKWdrx8aX/UI-UX-projects~~~~~~?node-id=12130-139680&t=SJ56yFqwlZYTCDrZ-0" }],
+        },
+        {
+            title: "Guthi Sansthan App Design",
+            type: "Mobile App",
+            desc: "Mobile app for notices, property details, service updates, and easy public access to Guthi Sansthan services",
+            tags: ["Responsive Web", "Mobile App", "Accessible UI"],
+            links: [{ label: "View Prototype", url: "https://www.figma.com/proto/PHUu7yCVqMLMftKWdrx8aX/UI-UX-projects~~~~~~?node-id=12130-164816&t=RtCopY4vWgTxxfGF-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2106%3A12686" }, { label: "View Design In Figma", url: "https://www.figma.com/design/PHUu7yCVqMLMftKWdrx8aX/UI-UX-projects~~~~~~?node-id=12130-164816&t=JVNV0j22ivw4M6Xv-0" }],
+        },
+        {
+            title: "Guthi Sansthan Attendance Website",
+            type: "Web Platform",
+            desc: "Web-based attendance system for employee management, attendance tracking, leave requests, calendar scheduling, reports, and dashboard monitoring",
+            tags: ["Responsive Web", "Mobile App", "Accessible UI"],
+            links: [{ label: "View Prototype", url: "https://www.figma.com/proto/PHUu7yCVqMLMftKWdrx8aX/UI-UX-projects~~~~~~?node-id=12130-184384&t=RtCopY4vWgTxxfGF-0&scaling=min-zoom&content-scaling=fixed&page-id=939%3A7182&starting-point-node-id=3943%3A10748&show-proto-sidebar=1" }, { label: "View Design In Figma", url: "https://www.figma.com/design/PHUu7yCVqMLMftKWdrx8aX/UI-UX-projects~~~~~~?node-id=12130-184384&t=j93T3ZGxOWYEJm2l-0" }],
         },
         {
             title: "Badapatra Digital Display",
             type: "Monitor Screen Design",
             desc: "Clean, high-visibility notice board for public monitors, presenting official announcements with clear hierarchy.",
             tags: ["Single Layout", "Public Monitor", "Typography"],
-            links: [{ label: "View Prototype", url: "https://www.figma.com/proto/PHUu7yCVqMLMftKWdrx8aX/UI-UX-projects~~~~~~?node-id=12130-207305&t=RtCopY4vWgTxxfGF-0&scaling=min-zoom&content-scaling=fixed&page-id=939%3A7182&starting-point-node-id=3943%3A10748" }, {label: "View Design In Figma", url: "https://www.figma.com/proto/PHUu7yCVqMLMftKWdrx8aX/UI-UX-projects~~~~~~?node-id=12130-207305&t=RtCopY4vWgTxxfGF-0&scaling=min-zoom&content-scaling=fixed&page-id=939%3A7182&starting-point-node-id=3943%3A10748"}],
+            links: [{ label: "View Prototype", url: "https://www.figma.com/proto/PHUu7yCVqMLMftKWdrx8aX/UI-UX-projects~~~~~~?node-id=12130-207305&t=RtCopY4vWgTxxfGF-0&scaling=min-zoom&content-scaling=fixed&page-id=939%3A7182&starting-point-node-id=3943%3A10748" }, { label: "View Design In Figma", url: "https://www.figma.com/proto/PHUu7yCVqMLMftKWdrx8aX/UI-UX-projects~~~~~~?node-id=12130-207305&t=RtCopY4vWgTxxfGF-0&scaling=min-zoom&content-scaling=fixed&page-id=939%3A7182&starting-point-node-id=3943%3A10748" }],
         },
         {
             title: "Xpress Sewa",
@@ -126,8 +156,8 @@ const Projects = () => {
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                     className={`w-full py-2.5 md:py-3 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 text-center ${i === 0
-                                            ? "bg-white text-black hover:bg-gray-200 shadow-lg shadow-white/5"
-                                            : "bg-transparent border border-white/20 text-white hover:border-[#6a6566] hover:bg-white/5"
+                                        ? "bg-white text-black hover:bg-gray-200 shadow-lg shadow-white/5"
+                                        : "bg-transparent border border-white/20 text-white hover:border-[#6a6566] hover:bg-white/5"
                                         }`}
                                 >
                                     {link.label}
