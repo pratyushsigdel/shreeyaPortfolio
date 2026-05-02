@@ -84,7 +84,7 @@ const Home = () => {
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
             >
-                <div className="relative group w-full max-w-[320px] sm:max-w-[400px] md:max-w-[500px]">
+                <div className="relative group w-full max-w-[320px] sm:max-w-[400px] md:max-w-[400px]">
                     {/* Background Glows */}
                     <div className="absolute -inset-10 bg-[#6a6566] opacity-10 rounded-full blur-[80px] group-hover:opacity-25 transition-opacity duration-1000 animate-pulse"></div>
                     <div className="absolute -inset-20 bg-[#1a1a1a] opacity-5 rounded-full blur-[100px] -z-10 animate-pulse delay-700"></div>
