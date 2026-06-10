@@ -34,7 +34,7 @@ const Experience = () => {
         {
             role: "UI/UX Designer",
             company: "Goodwish Engineering Pvt. Ltd.",
-            period: "March 2025 – Present",
+            period: "June 2025 – Present",
             description: [
                 "Led UI/UX design for multiple SaaS platforms (Parking, Attendance, Restaurant Management Systems) from concept to final delivery.",
                 "Designed complex dashboards for multi-role systems (Super Admin, Admin, End Users) across web and mobile.",
