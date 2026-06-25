@@ -9,7 +9,7 @@ const GraphicDesign = () => {
   const designs = [
     { image: graphic1, aspect: "aspect-[4/3]" },
     { image: graphic2, aspect: "aspect-[4/3]" },
-    { image: graphic3, aspect: "aspect-[3/4]" },  // Taller ratio for this one
+    { image: graphic3, aspect: "aspect-[4/3]" },  // Taller ratio for this one
     { image: graphic4, aspect: "aspect-[4/3]" }
 ];
   return (
